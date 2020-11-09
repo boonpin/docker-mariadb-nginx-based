@@ -27,11 +27,11 @@ COPY frontend /app/frontend
 COPY database.sql /
 
 WORKDIR /app/backend
-RUN npm run install
+RUN npm install
 RUN npm run build
 
 WORKDIR /app/frontend
-RUN npm run install
+RUN npm install
 RUN npm run build
 
 COPY config/nginx.conf /etc/nginx/nginx.conf
