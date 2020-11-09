@@ -6,7 +6,7 @@ LABEL Version=2.0
 
 LABEL Build docker build --rm --tag centos/roombooked .
 
-RUN yum -y install git wget curl
+RUN yum -y install git wget curl vi
 
 RUN curl -sL https://rpm.nodesource.com/setup_12.x | bash -
 RUN curl -sL https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | bash -
