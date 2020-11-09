@@ -26,6 +26,14 @@ COPY backend /app/backend
 COPY frontend /app/frontend
 COPY database.sql /
 
+WORKDIR /app/backend
+RUN npm run install
+RUN npm run build
+
+WORKDIR /app/frontend
+RUN npm run install
+RUN npm run build
+
 COPY config/nginx.conf /etc/nginx/nginx.conf
 COPY config/server.conf /etc/nginx/conf.d/
 
