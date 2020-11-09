@@ -60,6 +60,6 @@ VOLUME /var/lib/mysql
 VOLUME /app/backend/storage/data
 
 EXPOSE 80
-EXPOSE 443
+EXPOSE 50051
 
 ENTRYPOINT ["/startup.sh"]
